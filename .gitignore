@@ -1,0 +1,31 @@
+
+# Ignore everything by default
+*
+
+# Allow project source and documentation
+!.gitignore
+!README.md
+!src/
+!src/*.py
+!portfolio/
+!portfolio/**/
+
+# Allow portfolio demonstration assets
+!portfolio/*.csv
+!portfolio/*.png
+!portfolio/*.txt
+!portfolio/**/*.csv
+!portfolio/**/*.png
+!portfolio/**/*.txt
+
+# Keep generated output and local input data private
+input/
+output/
+
+# Never include Git metadata or local secrets
+.git-csv-cleaner/
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]

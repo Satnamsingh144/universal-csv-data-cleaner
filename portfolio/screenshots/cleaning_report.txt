@@ -1,0 +1,44 @@
+UNIVERSAL CSV DATA CLEANING REPORT
+==================================
+
+Status: Completed
+File type: CSV
+
+Original rows: 90
+Final rows: 90
+
+Duplicate rows removed: 0
+
+Missing values before cleaning: 0
+Missing values after cleaning: 0
+
+Detected date columns:
+- date
+- time
+
+DATA CLEANING REPORT
+====================
+
+Original rows: 90
+Final rows: 90
+
+Duplicate rows removed: 0
+
+Missing values before cleaning: 0
+Missing values after cleaning: 0
+
+Detected date columns:
+- date
+- time
+
+Final columns:
+- date
+- time
+- record_id
+- customer_age
+- units
+- unit_price
+- revenue
+- category
+- payment_method
+- returned

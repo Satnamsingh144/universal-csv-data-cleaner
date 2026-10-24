@@ -1,0 +1,40 @@
+
+UNIVERSAL CSV CLEANER 2.0
+DATA CLEANING REPORT
+====================
+
+1. CLEANING SUMMARY
+-------------------
+Original rows: 9
+Final rows: 7
+Rows removed: 2
+Duplicate rows removed: 2
+
+2. MISSING VALUES
+-----------------
+Missing values before cleaning: 5
+Missing values after cleaning: 2
+
+3. MISSING VALUES BY COLUMN
+---------------------------
+- quantity: 1
+- price: 1
+
+4. DATE DETECTION
+-----------------
+- sale_date
+
+5. FINAL COLUMN NAMES
+---------------------
+- customer_name
+- city
+- product
+- quantity
+- price
+- sale_date
+
+6. NOTES
+--------
+- Review the cleaned data before using it for important decisions.
+- Missing values may remain when they cannot be safely filled.
+- Date detection depends on column names and supported date formats.

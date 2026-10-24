@@ -1,0 +1,16 @@
+DateTime,UserID,Temperature,City,IsActive
+2026-10-01 08:15:23,1001,32.5,Hoshiarpur,True
+2026-10-01 09:30:45,1002,28.7,Ludhiana,False
+2026-10-01 10:45:12,1003,35.2,Amritsar,True
+2026-10-02 11:20:30,1004,26.8,Jalandhar,True
+2026-10-02 12:05:55,1005,30.1,Patiala,False
+2026-10-02 13:40:18,1006,33.9,Chandigarh,True
+2026-10-03 07:50:09,1007,24.6,Mohali,False
+2026-10-03 14:25:36,1008,29.4,Batala,True
+2026-10-03 15:10:42,1009,31.7,Pathankot,True
+2026-10-04 16:35:27,1010,27.3,Ferozepur,False
+2026-10-04 17:45:51,1011,36.4,Barnala,True
+2026-10-04 18:20:14,1012,25.9,Moga,False
+2026-10-05 19:05:33,1013,34.6,Kapurthala,True
+2026-10-05 20:15:48,1014,28.2,Faridkot,True
+2026-10-05 21:30:06,1015,37.1,Ropar,False
