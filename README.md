@@ -16,25 +16,34 @@ A reusable Python and Pandas tool that cleans, standardizes, validates, and repo
 - **Cleaning Reports:** Records row counts, duplicates removed, missing-value counts, detected date columns, and final column names.
 - **Error Handling:** Provides useful messages for common input problems.
 
+
 ## Project Structure
 
 ```text
 fiverr_project_01/
-├── input/
-│   └── sample_input.csv
-├── output/
-│   ├── cleaned_data.csv
-│   └── cleaning_report.txt
-├── src/
-│   └── cleaner.py
-├── backups/
-│   └── cleaner_v1.py
-├── portfolio/
-├── README.md
-└── V2_UPGRADE_PLAN.txt
+|-- .gitignore
+|-- input/
+|-- output/
+|-- portfolio/
+|   |-- before_after/
+|   |-- before_after.png
+|   |-- sales_messy_cleaned.csv
+|   |-- sales_messy_cleaning_report.txt
+|   |-- sample_delivery/
+|   |-- sample_input.csv
+|   `-- screenshots/
+|-- src/
+|   |-- cleaner.py
+|   |-- cleaner_v1.py
+|   `-- test.py
+|-- FINAL_QA_CHECKLIST.txt
+|-- README.md
+|-- V2_UPGRADE_PLAN.txt
+`-- Other project notes and checklists
 ```
 
 *Note: Some files and folders are created during testing or may vary in your local project.*
+
 
 ## Requirements
 
@@ -77,17 +86,22 @@ A business has a CSV file containing inconsistent column names, duplicate record
 
 This tool helps standardize the dataset and produces a cleaning report so the user can review the results before further analysis.
 
+
 ## Date-Handling Notes
 
 The cleaner supports configured date formats, including:
 
-- ISO format: `2026-01-05`
-- Day-first slash format: `05/01/2026`
-- Day-first hyphen format: `05-01-2026`
+- ISO date: `2026-01-05`
+- ISO timestamp: `2026-01-05 14:30:00`
+- Day-first slash date: `05/01/2026`
+- Day-first slash timestamp: `05/01/2026 14:30:00`
+- Day-first hyphen date: `05-01-2026`
+- Day-first hyphen timestamp: `05-01-2026 14:30:00`
 
 Slash-separated dates can be ambiguous. For example, `03/04/2026` could mean 3 April or March 4, depending on the convention. The current configuration interprets it as 3 April.
 
-Review dates and missing values before using cleaned data for important decisions.
+Date conversion also depends on column names and the percentage of non-empty values that can be parsed. Review dates and missing values before using cleaned data for important decisions.
+
 
 ## Limitations
 
@@ -96,6 +110,20 @@ Review dates and missing values before using cleaned data for important decision
 - Numeric conversion uses heuristics and may require review for mixed text-and-number columns.
 - Missing values may remain when the cleaning rules do not safely fill them.
 - The tool does not replace manual review or domain-specific data validation.
+
+## Portfolio Samples
+
+The `portfolio/` directory contains sample files demonstrating the cleaner's output.
+
+- `sample_input.csv` — sample input dataset.
+- `sales_messy_cleaned.csv` — cleaned sales dataset.
+- `sales_messy_cleaning_report.txt` — report for the sales dataset.
+- `before_after.png` — visual comparison of data before and after cleaning.
+- `sample_delivery/cleaned_data.csv` — example cleaned dataset prepared for delivery.
+- `sample_delivery/cleaning_report.txt` — corresponding cleaning report.
+- `screenshots/` — screenshots showing the results and report.
+
+These examples demonstrate the output format. Review the sample data and reports before using them as evidence of specific cleaning results.
 
 ## Technologies
 

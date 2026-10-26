@@ -7,10 +7,15 @@ from pathlib import Path
 # 1. LOAD DATA
 # -----------------------------
 
+
 def load_data(file_path):
 
     try:
         return pd.read_csv(file_path)
+
+    except pd.errors.EmptyDataError:
+        print("\nERROR: The CSV file is empty.")
+        return None
 
     except FileNotFoundError:
         print("\nERROR: The input file was not found.")
@@ -19,6 +24,7 @@ def load_data(file_path):
     except Exception as e:
         print(f"\nERROR: Could not read the file: {e}")
         return None
+
 
 def get_unique_output_path(file_path):
     file_path = Path(file_path)
@@ -106,10 +112,13 @@ def convert_date_columns(df):
     ]
 
     date_formats = [
-        "%Y-%m-%d",  # ISO: 2026-01-05
-        "%d/%m/%Y",  # Indian: 05/01/2026
-        "%d-%m-%Y"   # Indian: 05-01-2026
-    ]
+    "%Y-%m-%d %H:%M:%S",  # ISO date and time
+    "%Y-%m-%d",           # ISO date
+    "%d/%m/%Y %H:%M:%S",  # Indian date and time
+    "%d/%m/%Y",           # Indian date
+    "%d-%m-%Y %H:%M:%S",  # Indian date and time
+    "%d-%m-%Y"            # Indian date
+]
 
     date_columns = []
 

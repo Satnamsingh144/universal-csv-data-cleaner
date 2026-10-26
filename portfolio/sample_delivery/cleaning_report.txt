@@ -1,37 +1,31 @@
-UNIVERSAL CSV DATA CLEANING REPORT
-==================================
 
-Status: Completed
-File type: CSV
-
-Original rows: 90
-Final rows: 90
-
-Duplicate rows removed: 0
-
-Missing values before cleaning: 0
-Missing values after cleaning: 0
-
-Detected date columns:
-- date
-- time
-
+UNIVERSAL CSV CLEANER 2.0
 DATA CLEANING REPORT
 ====================
 
+1. CLEANING SUMMARY
+-------------------
 Original rows: 90
 Final rows: 90
-
+Rows removed: 0
 Duplicate rows removed: 0
 
+2. MISSING VALUES
+-----------------
 Missing values before cleaning: 0
 Missing values after cleaning: 0
 
-Detected date columns:
+3. MISSING VALUES BY COLUMN
+---------------------------
+- No missing values found
+
+4. DATE DETECTION
+-----------------
 - date
 - time
 
-Final columns:
+5. FINAL COLUMN NAMES
+---------------------
 - date
 - time
 - record_id
@@ -42,3 +36,9 @@ Final columns:
 - category
 - payment_method
 - returned
+
+6. NOTES
+--------
+- Review the cleaned data before using it for important decisions.
+- Missing values may remain when they cannot be safely filled.
+- Date detection depends on column names and supported date formats.
